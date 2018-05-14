@@ -78,12 +78,12 @@
 
     // Undo the collapse side padding for navbars with containers to ensure
     // alignment of right-aligned contents.
-    .navbar-fixed-top &,
-    .navbar-static-top &,
-    .navbar-fixed-bottom & {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    //.navbar-fixed-top &,
+    //.navbar-static-top &,
+    //.navbar-fixed-bottom & {
+    //  padding-left: 0;
+    //  padding-right: 0;
+    //}
   }
 }
 
@@ -155,6 +155,11 @@
   bottom: 0;
   margin-bottom: 0; // override .navbar defaults
   border-width: 1px 0 0;
+  min-height: 0px;
+  max-height: @navbar-height;
+  text-align: center;
+  padding-top:    5px;
+  padding-bottom: 5px;
 }
 
 
@@ -162,7 +167,7 @@
 
 .navbar-brand {
   float: left;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  padding: @navbar-brand-vertical @navbar-brand-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
   height: @navbar-height;
@@ -173,6 +178,8 @@
   }
 
   > img {
+    height: @navbar-brand-height;
+    line-height: @navbar-brand-height;
     display: block;
   }
 
